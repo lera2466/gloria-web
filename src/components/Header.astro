@@ -6,19 +6,25 @@ const links = [
 ];
 ---
 
-<header class="border-b border-slate-200">
+<header class="border-b border-slate-200 bg-green-700/30">
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
     <a href="/" class="flex items-center gap-2 font-semibold text-brand-700">
-      <img src="/images/gloriaLogo.png" alt="Logo" class="w-7 h-7" />
+      <img src="/images/gloriaLogo.png" alt="Logo" class="w-12 h-12" />
       <span class="spanFisioDomicilio">Fisio a Domicilio</span>
     </a>
-    <nav class="flex items-center gap-4 text-sm">
+    <nav class="flex items-center gap-5 text-sm">
       {
-        links.map((l) => (
-          <a class="hover:text-brand-600" href={l.href}>
-            {l.label}
-          </a>
-        ))
+        links.map((l) =>
+          l.label === "Inicio" ? (
+            <a class="tab-inicio hover:text-brand-600" href={l.href}>
+              {l.label}
+            </a>
+          ) : (
+            <a class="hover:text-brand-600" href={l.href}>
+              {l.label}
+            </a>
+          )
+        )
       }
       <a
         href="/contacto"
@@ -33,9 +39,14 @@ const links = [
   .spanFisioDomicilio {
     /* visible por defecto */
   }
-  @media (max-width: 640px) {
+  @media (max-width: 540px) {
     .spanFisioDomicilio {
       display: none;
+    }
+  }
+  @media (max-width: 400px) {
+    .tab-inicio {
+      display: none !important;
     }
   }
 </style>
