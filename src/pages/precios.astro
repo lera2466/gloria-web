@@ -1,0 +1,37 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PriceCard from "../components/PriceCard.astro";
+---
+
+<Base title="Precios - Fisio a Domicilio">
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-8">Precios</h1>
+    <div class="grid md:grid-cols-3 gap-6">
+      <PriceCard
+        title="Primera visita"
+        price={55}
+        features={["60 min", "Valoración + tratamiento", "Madrid capital"]}
+      />
+      <PriceCard
+        title="Sesión estándar"
+        price={50}
+        features={[
+          "50-60 min",
+          "Tratamiento personalizado",
+          "Material incluido",
+        ]}
+        highlight
+      />
+      <PriceCard
+        title="Bono 5 sesiones"
+        price={230}
+        features={["Ahorras 20€", "Plan de seguimiento", "Válido 6 meses"]}
+      />
+    </div>
+    <p class="text-sm text-slate-600 mt-4">
+      * Suplemento fuera de M-30 según distancia. Contacta para presupuesto.
+    </p>
+  </section>
+</Base>

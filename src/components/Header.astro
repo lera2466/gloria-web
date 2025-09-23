@@ -1,0 +1,31 @@
+---
+const links = [
+  { href: "/", label: "Inicio" },
+  { href: "/tratamientos", label: "Tratamientos" },
+  { href: "/precios", label: "Precios" },
+  { href: "/contacto", label: "Contacto" },
+];
+---
+
+<header class="border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 font-semibold text-brand-700">
+      <img src="/images/gloriaLogo.png" alt="Logo" class="w-7 h-7" />
+      <span>Fisio a Domicilio</span>
+    </a>
+    <nav class="flex items-center gap-4 text-sm">
+      {
+        links.map((l) => (
+          <a class="hover:text-brand-600" href={l.href}>
+            {l.label}
+          </a>
+        ))
+      }
+      <a
+        href="/contacto"
+        class="ml-2 rounded-full bg-brand-600 text-white px-4 py-2 hover:bg-brand-700"
+        >Reserva</a
+      >
+    </nav>
+  </div>
+</header>

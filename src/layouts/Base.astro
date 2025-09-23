@@ -1,0 +1,36 @@
+---
+import Footer from "src/components/Footer.astro";
+import Header from "src/components/Header.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "Fisioterapia a domicilio",
+  description = "Sesiones personalizadas en tu hogar en Madrid",
+  ogImage = "/images/gloriaLogo.jpg",
+} = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/images/gloriaLogo.png" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen flex flex-col bg-white text-slate-800">
+    <Header slot="header" />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer slot="footer" />
+  </body>
+</html>

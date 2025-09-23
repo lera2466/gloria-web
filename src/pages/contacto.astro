@@ -1,0 +1,305 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Base
+  title="Contacto - Fisio a Domicilio Madrid"
+  description="Contacta con Gloria, fisioterapeuta colegiada especializada en tratamientos a domicilio en Madrid. WhatsApp, email y teléfono disponibles."
+>
+  <Header slot="header" />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-brand-50 to-brand-100 py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-brand-900 mb-4">
+        ¡Estoy aquí para ayudarte!
+      </h1>
+      <p class="text-xl text-brand-700 mb-8 max-w-2xl mx-auto">
+        Contacta conmigo para reservar tu sesión de fisioterapia a domicilio.
+        Respuesta rápida y atención personalizada garantizada.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <div class="grid lg:grid-cols-2 gap-12">
+      <!-- Left Column - Contact Details -->
+      <div class="space-y-8">
+        <div class="bg-white rounded-xl shadow-lg p-8 border border-brand-100">
+          <h2 class="text-2xl font-bold text-brand-900 mb-6 flex items-center">
+            <svg
+              class="w-6 h-6 mr-3 text-brand-600"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Gloria Martínez
+          </h2>
+
+          <div class="space-y-4 text-slate-700">
+            <div class="flex items-start">
+              <svg
+                class="w-5 h-5 mr-3 mt-1 text-brand-600 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <div>
+                <p class="font-semibold">Fisioterapeuta Colegiada</p>
+                <p class="text-sm">
+                  Nº Colegiada: 15.247 · Colegio Profesional de Fisioterapeutas
+                  de Madrid
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <svg
+                class="w-5 h-5 mr-3 text-brand-600 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                ></path>
+              </svg>
+              <div>
+                <p class="font-semibold">Teléfono</p>
+                <a
+                  href="tel:+34649152847"
+                  class="text-brand-700 hover:text-brand-800 font-medium"
+                >
+                  +34 649 15 28 47
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <svg
+                class="w-5 h-5 mr-3 text-brand-600 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                ></path>
+                <path
+                  d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                ></path>
+              </svg>
+              <div>
+                <p class="font-semibold">Email</p>
+                <a
+                  href="mailto:gloria@fisiomadrid.es"
+                  class="text-brand-700 hover:text-brand-800 font-medium"
+                >
+                  gloria@fisiomadrid.es
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Contact -->
+        <div
+          class="bg-green-50 rounded-xl shadow-lg p-8 border border-green-200"
+        >
+          <h3 class="text-xl font-bold text-green-900 mb-4 flex items-center">
+            <svg
+              class="w-6 h-6 mr-3 text-green-600"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.886 3.75"
+              ></path>
+            </svg>
+            Contacto por WhatsApp
+          </h3>
+          <p class="text-green-700 mb-4">
+            La forma más rápida de contactar conmigo. Te respondo enseguida y
+            podemos coordinar tu cita al momento.
+          </p>
+          <a
+            href="https://wa.me/34649152847?text=Hola Gloria, me gustaría información sobre fisioterapia a domicilio"
+            class="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.886 3.75"
+              ></path>
+            </svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
+
+        <!-- Schedule -->
+        <div
+          class="bg-brand-50 rounded-xl shadow-lg p-8 border border-brand-200"
+        >
+          <h3 class="text-xl font-bold text-brand-900 mb-4 flex items-center">
+            <svg
+              class="w-6 h-6 mr-3 text-brand-600"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Horario de Atención
+          </h3>
+          <div class="space-y-2 text-brand-700">
+            <div class="flex justify-between">
+              <span class="font-medium">Lunes a Viernes:</span>
+              <span>9:00 - 20:00</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-medium">Sábados:</span>
+              <span>9:00 - 14:00</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-medium">Domingos:</span>
+              <span>Cerrado</span>
+            </div>
+            <div class="mt-4 p-3 bg-brand-100 rounded-lg">
+              <p class="text-sm font-medium text-brand-800">
+                ⚡ Respuesta rápida por WhatsApp en horario de atención
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Contact Form -->
+      <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-200">
+        <h3 class="text-2xl font-bold text-slate-900 mb-6">
+          Envíame un mensaje
+        </h3>
+        <form class="space-y-6">
+          <div>
+            <label
+              for="name"
+              class="block text-sm font-medium text-slate-700 mb-2"
+            >
+              Nombre completo *
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+              placeholder="Tu nombre"
+            />
+          </div>
+
+          <div>
+            <label
+              for="phone"
+              class="block text-sm font-medium text-slate-700 mb-2"
+            >
+              Teléfono *
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+              placeholder="+34 123 456 789"
+            />
+          </div>
+
+          <div>
+            <label
+              for="email"
+              class="block text-sm font-medium text-slate-700 mb-2"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+              placeholder="tu@email.com"
+            />
+          </div>
+
+          <div>
+            <label
+              for="message"
+              class="block text-sm font-medium text-slate-700 mb-2"
+            >
+              Mensaje *
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors resize-none"
+              placeholder="Cuéntame qué necesitas..."></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-brand-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-700 transition-colors flex items-center justify-center"
+          >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+              ></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+              ></path>
+            </svg>
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-brand-600 py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">
+        ¿Necesitas fisioterapia urgente?
+      </h2>
+      <p class="text-brand-100 text-lg mb-8">
+        Para casos urgentes o consultas inmediatas, contáctame directamente por
+        WhatsApp
+      </p>
+      <a
+        href="https://wa.me/34649152847?text=Hola Gloria, necesito fisioterapia urgente"
+        class="inline-flex items-center bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-600 transition-colors text-lg"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.886 3.75"
+          ></path>
+        </svg>
+        WhatsApp Urgente
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Base>

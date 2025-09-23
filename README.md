@@ -1,43 +1,36 @@
-# Astro Starter Kit: Minimal
+# Fisio a Domicilio — Astro + Cal.com
 
-```sh
-pnpm create astro@latest -- --template minimal
+
+Sitio estático con Astro y Tailwind.
+
+
+## Requisitos
+- Node.js 18+
+
+
+## Puesta en marcha
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+## Calendario (Cal.com)
+- Crea usuario y evento en Cal.com
+- Pon el slug en `.env` como `CAL_LINK="usuario/mi-evento"`
+- O pásalo como prop: `<CalendarEmbed link="usuario/mi-evento" />`
 
-Inside of your Astro project, you'll see the following folders and files:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Despliegue
+- Vercel, Netlify o GitHub Pages.
+- Para Vercel: importa el repositorio, añade la variable `CAL_LINK` en Project Settings → Environment Variables y despliega.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Personalización
+- Colores en `tailwind.config.cjs`
+- Precios en `src/pages/precios.astro`
+- Texto y servicios en `src/pages/tratamientos.astro`
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Licencia
+MIT

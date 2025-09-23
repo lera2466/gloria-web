@@ -1,0 +1,26 @@
+---
+export type Props = {
+  title: string;
+  price: number;
+  features?: string[];
+  highlight?: boolean;
+};
+const { title, price, features = [], highlight = false } = Astro.props;
+---
+
+<div
+  class={`rounded-2xl border ${highlight ? "border-brand-500 shadow-lg" : "border-slate-200"} p-6 flex flex-col gap-4`}
+>
+  <h3 class="text-lg font-semibold">{title}</h3>
+  <div class="text-3xl font-bold">
+    {price}€ <span class="text-sm font-normal text-slate-500">/ sesión</span>
+  </div>
+  <ul class="text-sm space-y-2">
+    {features.map((f: string) => <li>• {f}</li>)}
+  </ul>
+  <a
+    href="/contacto"
+    class="mt-4 rounded-full bg-brand-600 text-white px-4 py-2 text-center hover:bg-brand-700"
+    >Reservar</a
+  >
+</div>
