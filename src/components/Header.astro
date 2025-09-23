@@ -11,7 +11,7 @@ const links = [
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
     <a href="/" class="flex items-center gap-2 font-semibold text-brand-700">
       <img src="/images/gloriaLogo.png" alt="Logo" class="w-7 h-7" />
-      <span>Fisio a Domicilio</span>
+      <span class="spanFisioDomicilio">Fisio a Domicilio</span>
     </a>
     <nav class="flex items-center gap-4 text-sm">
       {
@@ -29,3 +29,14 @@ const links = [
     </nav>
   </div>
 </header>
+
+<style>
+  .spanFisioDomicilio {
+    /* visible por defecto */
+  }
+  @media (max-width: 640px) {
+    .spanFisioDomicilio {
+      display: none;
+    }
+  }
+</style>
