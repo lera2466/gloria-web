@@ -1,0 +1,64 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  items: FAQItem[];
+}
+
+const { items } = Astro.props;
+
+// Schema.org JSON-LD para FAQPage
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<section class="py-16 bg-slate-50">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-brand-900">
+      Preguntas frecuentes
+    </h2>
+    <div class="space-y-4">
+      {
+        items.map((item, index) => (
+          <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden">
+            <summary class="cursor-pointer p-6 font-semibold text-lg text-brand-900 hover:bg-brand-50 transition-colors flex justify-between items-center">
+              <span>{item.question}</span>
+              <svg
+                class="w-5 h-5 text-brand-600 transition-transform group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-700">
+              <p>{item.answer}</p>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</section>

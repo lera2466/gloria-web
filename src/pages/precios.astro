@@ -5,7 +5,11 @@ import Footer from "../components/Footer.astro";
 import PriceCard from "../components/PriceCard.astro";
 ---
 
-<Base title="Precios - Fisio a Domicilio">
+<Base
+  title="Precios Fisioterapia a Domicilio | Torrejón, Alcalá, Villalbilla - 2026"
+  description="Tarifas transparentes de fisioterapia a domicilio en Torrejón de Ardoz, Alcalá de Henares, Villalbilla y Fuente el Saz. Desde 60€ sesión. Bonos disponibles. Material y desplazamiento incluido."
+  keywords="precios fisioterapia domicilio Torrejón, tarifas fisioterapeuta Alcalá, cuanto cuesta fisio domicilio Villalbilla, precios rehabilitación casa Fuente el Saz, bono fisioterapia Corredor Henares"
+>
   <section class="max-w-6xl mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-8">Precios</h1>
     <div class="grid md:grid-cols-3 gap-6">
@@ -17,18 +21,29 @@ import PriceCard from "../components/PriceCard.astro";
           "Tratamiento personalizado",
           "Material y desplazamiento incluido",
         ]}
+        mensajeWhatsApp="¡Hola Gloria! Me gustaría reservar una sesión estándar de fisioterapia a domicilio. ¿Cuándo tendrías disponibilidad?"
         highlight
       />
       <PriceCard
         title="Bono 5 sesiones"
         price={280}
-        features={["Plan de seguimiento incluido", "Válido 6 meses"]}
+        features={[
+          "Plan de seguimiento incluido",
+          "Válido 6 meses",
+          "Material y desplazamiento incluido",
+        ]}
+        mensajeWhatsApp="¡Hola Gloria! Me interesa contratar un Bono de 5 sesiones de fisioterapia. ¿Podríamos coordinar las fechas?"
         highlight
       />
       <PriceCard
         title="Bono 10 sesiones"
         price={520}
-        features={["Plan de seguimiento incluido", "Válido 1 año"]}
+        features={[
+          "Plan de seguimiento incluido",
+          "Válido 1 año",
+          "Material y desplazamiento incluido",
+        ]}
+        mensajeWhatsApp="¡Hola Gloria! Me interesa contratar un Bono de 10 sesiones de fisioterapia. ¿Podríamos coordinar las fechas?"
         highlight
       />
     </div>

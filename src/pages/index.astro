@@ -3,11 +3,56 @@ import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CTA from "../components/CTA.astro";
+import FAQ from "../components/FAQ.astro";
+
+const faqItems = [
+  {
+    question: "¿Qué zonas cubres en el Corredor del Henares?",
+    answer:
+      "Me desplazo a Torrejón de Ardoz, Alcalá de Henares, Villalbilla, Fuente el Saz y otras localidades cercanas del Corredor del Henares. El desplazamiento está incluido en el precio.",
+  },
+  {
+    question: "¿Cuánto cuesta una sesión de fisioterapia a domicilio?",
+    answer:
+      "La sesión estándar tiene un coste de 60€ (50-60 minutos) con desplazamiento y material incluido. También ofrezco bonos: 5 sesiones por 280€ y 10 sesiones por 520€, válidos 6 meses y 1 año respectivamente.",
+  },
+  {
+    question: "¿Necesito tener material o camilla en casa?",
+    answer:
+      "No, llevo todo el material profesional necesario para realizar la sesión. Solo necesitas tener un espacio tranquilo y cómodo donde podamos trabajar (puede ser una cama, sofá o alfombra según el tratamiento).",
+  },
+  {
+    question: "¿Cuál es el horario de atención?",
+    answer:
+      "Atiendo de lunes a viernes de 9:00 a 20:00 y sábados de 9:00 a 14:00. Los horarios de las sesiones son flexibles y nos adaptamos a tu disponibilidad dentro de este rango.",
+  },
+  {
+    question: "¿Cómo puedo reservar una cita?",
+    answer:
+      "Puedes contactarme por WhatsApp al 681 80 59 66 (forma más rápida), llamar por teléfono o enviar un email a fisioterapiagrdomicilio@gmail.com. Te respondo rápidamente para coordinar tu cita.",
+  },
+  {
+    question: "¿Trabajas con seguros médicos?",
+    answer:
+      "Proporciono factura oficial tras cada sesión que puedes presentar a tu compañía de seguros para solicitar el reembolso según las condiciones de tu póliza.",
+  },
+  {
+    question: "¿Qué tratamientos ofreces a domicilio?",
+    answer:
+      "Ofrezco rehabilitación musculoesquelética (post-operatorios, fracturas), neurorehabilitación (ictus, Parkinson, ELA), fisioterapia pediátrica (respiratoria, cólicos) y fisioterapia ATM (bruxismo, migrañas). Todos con planes personalizados.",
+  },
+  {
+    question: "¿Estás colegiada?",
+    answer:
+      "Sí, soy Gloria Ruiz, fisioterapeuta colegiada nº 015657 por el Colegio Profesional de Fisioterapeutas de Madrid. Cuento con formación especializada y experiencia en tratamientos a domicilio.",
+  },
+];
 ---
 
 <Base
-  title="Fisioterapia a domicilio en Corredor del Henares"
-  description="Tratamientos personalizados en tu hogar. Reserva online."
+  title="Fisioterapia a domicilio en Torrejón, Alcalá, Villalbilla | Corredor del Henares"
+  description="Fisioterapeuta colegiada a domicilio en Torrejón de Ardoz, Alcalá de Henares, Villalbilla y Fuente el Saz. Rehabilitación, neurorehabilitación y fisioterapia pediátrica. ✓ Sin desplazamientos ✓ Trato personalizado"
+  keywords="fisioterapia a domicilio Torrejón de Ardoz, fisioterapeuta Alcalá de Henares, fisio Villalbilla, fisioterapia Fuente el Saz, rehabilitación domicilio Corredor Henares, neurorehabilitación Madrid este, fisioterapia domicilio"
 >
   <section class="pt-12 pb-16">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
@@ -34,7 +79,7 @@ import CTA from "../components/CTA.astro";
       </div>
       <img
         src="/images/gloriaLogoLargo.png"
-        alt="Fisioterapia en casa"
+        alt="Fisioterapia a domicilio en Torrejón, Alcalá de Henares, Villalbilla - Gloria Ruiz fisioterapeuta colegiada"
         class="rounded-2xl shadow"
       />
     </div>
@@ -42,27 +87,27 @@ import CTA from "../components/CTA.astro";
 
   <section class="py-12 bg-slate-50">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
-      <div class="p-6 rounded-2xl border border-slate-200">
+      <div class="p-6 rounded-2xl border border-slate-200 bg-white">
         <h3 class="font-semibold text-lg">Rehabilitación muscoesquelética</h3>
         <p class="text-sm text-slate-600">
           Lesiones ortopédicas (fracturas, protesis de cadera yo rodilla,
           fracturas, etc)
         </p>
       </div>
-      <div class="p-6 rounded-2xl border border-slate-200">
+      <div class="p-6 rounded-2xl border border-slate-200 bg-white">
         <h3 class="font-semibold text-lg">Neurorehabilitación</h3>
         <p class="text-sm text-slate-600">
           Ictus, Parkinson, esclerosis múltiple, ELA...
         </p>
       </div>
-      <div class="p-6 rounded-2xl border border-slate-200">
+      <div class="p-6 rounded-2xl border border-slate-200 bg-white">
         <h3 class="font-semibold text-lg">Fisioterapia pediátrica</h3>
         <p class="text-sm text-slate-600">
           Fisioterapida respiratoria, cólico del lactante, neuoestimulación
           motriz.
         </p>
       </div>
-      <div class="p-6 rounded-2xl border border-slate-200">
+      <div class="p-6 rounded-2xl border border-slate-200 bg-white">
         <h3 class="font-semibold text-lg">
           Fisioterapia en la articulación temporomandibular (ATM)
         </h3>
@@ -70,6 +115,138 @@ import CTA from "../components/CTA.astro";
       </div>
     </div>
   </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-brand-900 mb-4">
+          Zonas de servicio en el Corredor del Henares
+        </h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+          Me desplazo a tu domicilio en las siguientes localidades con todo el
+          material necesario. Sin coste adicional por desplazamiento.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a
+          href="/localidades/torrejon-de-ardoz"
+          class="group bg-brand-50 hover:bg-brand-100 p-6 rounded-xl border border-brand-200 transition-all hover:shadow-lg"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-xl text-brand-900 mb-2">
+                Torrejón de Ardoz
+              </h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Servicio en centro, Soto del Henares, Fronteras y todas las
+                urbanizaciones
+              </p>
+              <span
+                class="text-brand-700 font-medium text-sm group-hover:underline"
+              >
+                Ver más información →
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="/localidades/alcala-de-henares"
+          class="group bg-brand-50 hover:bg-brand-100 p-6 rounded-xl border border-brand-200 transition-all hover:shadow-lg"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-xl text-brand-900 mb-2">
+                Alcalá de Henares
+              </h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Cobertura completa: casco histórico, Nueva Alcalá, Espartales,
+                La Garena
+              </p>
+              <span
+                class="text-brand-700 font-medium text-sm group-hover:underline"
+              >
+                Ver más información →
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="/localidades/villalbilla"
+          class="group bg-brand-50 hover:bg-brand-100 p-6 rounded-xl border border-brand-200 transition-all hover:shadow-lg"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-xl text-brand-900 mb-2">Villalbilla</h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Atención domiciliaria en toda la localidad y urbanizaciones
+              </p>
+              <span
+                class="text-brand-700 font-medium text-sm group-hover:underline"
+              >
+                Ver más información →
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="/localidades/fuente-el-saz"
+          class="group bg-brand-50 hover:bg-brand-100 p-6 rounded-xl border border-brand-200 transition-all hover:shadow-lg"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-xl text-brand-900 mb-2">
+                Fuente el Saz
+              </h3>
+              <p class="text-sm text-slate-600 mb-3">
+                Fisioterapia profesional a domicilio en toda la localidad
+              </p>
+              <span
+                class="text-brand-700 font-medium text-sm group-hover:underline"
+              >
+                Ver más información →
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <div
+          class="bg-slate-50 p-6 rounded-xl border border-slate-200 md:col-span-2 lg:col-span-2"
+        >
+          <div>
+            <h3 class="font-bold text-xl text-slate-900 mb-2">
+              Otras localidades cercanas
+            </h3>
+            <p class="text-sm text-slate-600 mb-3">
+              Daganzo de Arriba, Ajalvir, Cobeña y otras zonas próximas del
+              Corredor del Henares
+            </p>
+            <a
+              href="/contacto"
+              class="text-brand-700 font-medium text-sm hover:underline"
+            >
+              Consulta disponibilidad →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-slate-600 mb-4">¿Tu localidad no aparece en la lista?</p>
+        <a
+          href="/contacto"
+          class="inline-block rounded-full bg-brand-600 text-white px-8 py-3 font-medium hover:bg-brand-700 transition-colors"
+          >Contáctame y lo consultamos</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqItems} />
+
   <link rel="stylesheet" href="/button-xs-text.css" />
 </Base>
 <CTA />

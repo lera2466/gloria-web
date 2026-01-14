@@ -4,8 +4,15 @@ export type Props = {
   price: number;
   features?: string[];
   highlight?: boolean;
+  mensajeWhatsApp: string;
 };
-const { title, price, features = [], highlight = false } = Astro.props;
+const {
+  title,
+  price,
+  features = [],
+  highlight = false,
+  mensajeWhatsApp,
+} = Astro.props;
 ---
 
 <div
@@ -19,8 +26,9 @@ const { title, price, features = [], highlight = false } = Astro.props;
     {features.map((f: string) => <li>• {f}</li>)}
   </ul>
   <a
-    href="/contacto"
+    href={`https://wa.me/681805966?text=${mensajeWhatsApp}`}
     class="mt-4 rounded-full bg-brand-600 text-white px-4 py-2 text-center hover:bg-brand-700"
-    >Reserva ahora</a
+    target="_blank"
+    rel="noopener noreferrer">Reserva por WhatsApp</a
   >
 </div>

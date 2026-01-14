@@ -6,13 +6,128 @@ export interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  keywords?: string;
+  canonicalURL?: string;
 }
 
 const {
   title = "Fisioterapia a domicilio",
   description = "Sesiones personalizadas en tu hogar en Madrid",
   ogImage = "/images/gloriaLogo.jpg",
+  keywords = "fisioterapia, fisioterapeuta, fisio a domicilio, rehabilitación, Madrid",
+  canonicalURL,
 } = Astro.props;
+
+const currentURL = canonicalURL || new URL(Astro.url.pathname, Astro.site);
+
+// Schema.org JSON-LD para LocalBusiness y MedicalBusiness
+const schemaOrgJSONLD = {
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness", "LocalBusiness", "HealthAndBeautyBusiness"],
+  name: "Gloria Ruiz - Fisioterapia a Domicilio",
+  image: "https://fisioterapiagrdomicilio.com/images/gloriaLogo.png",
+  description:
+    "Fisioterapia a domicilio en el Corredor del Henares. Servicios profesionales de rehabilitación musculoesquelética, neurorehabilitación, fisioterapia pediátrica y ATM en Torrejón de Ardoz, Alcalá de Henares, Villalbilla y Fuente el Saz.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Madrid",
+    addressRegion: "Comunidad de Madrid",
+    addressCountry: "ES",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 40.5167,
+    longitude: -3.5333,
+  },
+  url: "https://fisioterapiagrdomicilio.com",
+  telephone: "+34681805966",
+  email: "fisioterapiagrdomicilio@gmail.com",
+  priceRange: "€€",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "20:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "09:00",
+      closes: "14:00",
+    },
+  ],
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Torrejón de Ardoz",
+    },
+    {
+      "@type": "City",
+      name: "Alcalá de Henares",
+    },
+    {
+      "@type": "City",
+      name: "Villalbilla",
+    },
+    {
+      "@type": "City",
+      name: "Fuente el Saz de Jarama",
+    },
+    {
+      "@type": "City",
+      name: "Daganzo de Arriba",
+    },
+    {
+      "@type": "City",
+      name: "Ajalvir",
+    },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Servicios de Fisioterapia",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Rehabilitación Musculoesquelética",
+          description:
+            "Tratamiento de lesiones ortopédicas, fracturas, prótesis",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Neurorehabilitación",
+          description: "Ictus, Parkinson, esclerosis múltiple, ELA",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Fisioterapia Pediátrica",
+          description: "Fisioterapia respiratoria, cólico del lactante",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Fisioterapia ATM",
+          description: "Bruxismo, migraña, tinnitus",
+        },
+      },
+    ],
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "12",
+  },
+};
 ---
 
 <html lang="es">
@@ -24,9 +139,35 @@ const {
     />
     <link rel="icon" href="/images/gloriaLogo.png" />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <link rel="canonical" href={currentURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="ES-M" />
+    <meta name="geo.placename" content="Madrid" />
+    <meta name="geo.position" content="40.5167;-3.5333" />
+    <meta name="ICBM" content="40.5167, -3.5333" />
+
+    <!-- Schema.org JSON-LD -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(schemaOrgJSONLD)}
+    />
+
     <title>{title}</title>
   </head>
   <body class="min-h-screen flex flex-col bg-white text-slate-800">
