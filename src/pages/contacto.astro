@@ -191,7 +191,12 @@ import Footer from "../components/Footer.astro";
         <h3 class="text-2xl font-bold text-slate-900 mb-6">
           Envíame un mensaje
         </h3>
-        <form class="space-y-6">
+        <form
+          action="https://formspree.io/f/xnjjndae"
+          method="POST"
+          class="space-y-6"
+          id="contact-form"
+        >
           <div>
             <label
               for="name"
@@ -304,3 +309,18 @@ import Footer from "../components/Footer.astro";
 
   <Footer slot="footer" />
 </Base>
+
+<script>
+  // Script para mostrar mensaje de confirmación al enviar
+  const form = document.getElementById("contact-form");
+  if (form) {
+    form.addEventListener("submit", function () {
+      // Mostrar mensaje de éxito (opcional)
+      setTimeout(() => {
+        alert(
+          "¡Mensaje enviado! Te responderé lo más pronto posible por email o WhatsApp. Muchas gracias."
+        );
+      }, 100);
+    });
+  }
+</script>
